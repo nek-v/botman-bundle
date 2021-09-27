@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Services\Http;
+namespace Nek\Bundle\BotmanBundle\Services\Http;
 
 use Http\Client\Common\HttpMethodsClient;
-use Sgomez\Bundle\BotmanBundle\Exception\TelegramClientException;
-use Sgomez\Bundle\BotmanBundle\Model\Telegram\User;
+use Nek\Bundle\BotmanBundle\Exception\TelegramClientException;
+use Nek\Bundle\BotmanBundle\Model\Telegram\User;
 
 final class TelegramClient
 {

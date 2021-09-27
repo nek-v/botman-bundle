@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Tests\DependencyInjection;
+namespace Nek\Bundle\BotmanBundle\Tests\DependencyInjection;
 
 use BotMan\BotMan\Drivers\NullDriver;
 use Matthias\SymfonyConfigTest\PhpUnit\ConfigurationTestCaseTrait;
+use Nek\Bundle\BotmanBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
-use Sgomez\Bundle\BotmanBundle\DependencyInjection\Configuration;
 
 class FacebookConfigurationTest extends TestCase
 {

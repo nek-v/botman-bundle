@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Command;
+namespace Nek\Bundle\BotmanBundle\Command;
 
-use Sgomez\Bundle\BotmanBundle\Services\Http\FacebookClient;
+use Nek\Bundle\BotmanBundle\Services\Http\FacebookClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -42,7 +42,7 @@ class FacebookInfoCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
 
@@ -51,5 +51,6 @@ class FacebookInfoCommand extends Command
 
         $io->title('Messenger Profile Properties');
         $io->writeln($yaml);
+        return Command::SUCCESS;
     }
 }

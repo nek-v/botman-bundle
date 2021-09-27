@@ -1,7 +1,10 @@
 # BotMan Bundle
 > BotMan integration for Symfony
+>
+>As the author scored the project, it was decided to develop fork.
 
 This is a bundle to use [BotMan](https://botman.io/) framework in Symfony.
+
 
 ## Supported drivers
 
@@ -28,7 +31,7 @@ Install the library via [Composer](https://getcomposer.org/) by
 running the following command:
 
 ```bash
-composer require sgomez/botman-bundle
+composer require nek/botman-bundle
 ```
 
 ### Step 2: Enable the bundle
@@ -45,7 +48,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Sgomez\Bundle\BotmanBundle\BotmanBundle(),
+        new Nek\Bundle\BotmanBundle\BotmanBundle(),
         // ...
     );
 }
@@ -173,7 +176,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTION.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/sgomez/botman-bundle/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/nek-v/botman-bundle/tags).
 However, this project is in very alpha status and config file format can change very quickly. 
 
 ## License
