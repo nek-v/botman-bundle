@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Nek\Bundle\BotmanBundle\Exception;
+namespace nek\Bundle\BotmanBundle\Exception;
 
 class FacebookClientException extends \RuntimeException
 {

@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Nek\Bundle\BotmanBundle\Routing;
+namespace nek\Bundle\BotmanBundle\Routing;
 
 use Symfony\Component\Config\Loader\Loader;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;

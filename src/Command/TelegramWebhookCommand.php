@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Nek\Bundle\BotmanBundle\Command;
+namespace nek\Bundle\BotmanBundle\Command;
 
-use Nek\Bundle\BotmanBundle\Command\Helpers\TelegramTrait;
-use Nek\Bundle\BotmanBundle\Services\Http\TelegramClient;
+use nek\Bundle\BotmanBundle\Command\Helpers\TelegramTrait;
+use nek\Bundle\BotmanBundle\Services\Http\TelegramClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

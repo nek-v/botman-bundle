@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Nek\Bundle\BotmanBundle\Command\Helpers;
+namespace nek\Bundle\BotmanBundle\Command\Helpers;
 
 use Symfony\Component\Console\Style\OutputStyle;
 
