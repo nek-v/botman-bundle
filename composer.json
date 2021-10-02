@@ -5,54 +5,42 @@
         {
             "name": "Sergio Gómez",
             "email": "sergio@uco.es"
+        },
+        {
+            "name": "nek",
+            "email": "nek@srez.org"
         }
     ],
     "type": "symfony-bundle",
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": "^7.4",
         "ext-curl": "*",
         "ext-json": "*",
-        "botman/botman": "^2.4",
-        "php-http/client-common": "^1.7",
-        "php-http/client-implementation": "^1.0",
-        "symfony/cache": "^3.4|^4.0",
-        "symfony/config": "^3.4|^4.0",
-        "symfony/console": "^3.4|^4.0",
-        "symfony/dependency-injection": "^3.4|^4.0",
-        "symfony/http-foundation": "^3.4|^4.0",
-        "symfony/http-kernel": "^3.4|^4.0",
-        "symfony/routing": "^3.4|^4.0",
+        "botman/botman": "^2.6",
+        "php-http/client-common": "^1.11",
+        "symfony/cache": "^5.3",
+        "symfony/config": "^5.3",
+        "symfony/console": "5.3.*",
+        "symfony/dependency-injection": "^5.3",
+        "symfony/http-foundation": "^5.3",
+        "symfony/http-kernel": "^5.3",
+        "symfony/routing": "^5.3",
         "tightenco/collect": "^5.6"
     },
     "require-dev": {
-        "botman/driver-amazon-alexa": "^1.0",
-        "botman/driver-botframework": "^1.0",
-        "botman/driver-cisco-spark": "^1.0",
-        "botman/driver-facebook": "^1.0",
-        "botman/driver-hangouts": "^1.0",
-        "botman/driver-hipchat": "^1.0",
-        "botman/driver-kik": "^1.0",
-        "botman/driver-nexmo": "^1.0",
-        "botman/driver-slack": "^2.0",
-        "botman/driver-telegram": "^1.0",
-        "botman/driver-twilio": "^1.0",
-        "botman/driver-twitter": "^1.0",
-        "botman/driver-wechat": "^1.0",
-        "illuminate/support": "^5.6",
-        "matthiasnoback/symfony-config-test": "^4.0",
-        "matthiasnoback/symfony-dependency-injection-test": "^3.0",
-        "php-http/guzzle6-adapter": "^1.1",
-        "php-http/httplug-bundle": "^1.11",
-        "phpstan/phpstan": "^0.10.3",
-        "phpstan/phpstan-phpunit": "^0.10.0",
-        "phpstan/phpstan-symfony": "^0.10.1",
-        "phpunit/phpunit": "^7.3",
-        "symplify/easy-coding-standard": "^4.6"
+        "botman/driver-facebook": "^1.11",
+        "botman/driver-telegram": "^1.6",
+        "matthiasnoback/symfony-config-test": "^4.3",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "phpstan/phpstan": "^0.12.99",
+        "phpstan/phpstan-phpunit": "^0.12.22",
+        "phpstan/phpstan-symfony": "^0.12.44",
+        "phpunit/phpunit": "^9.5",
+        "symplify/easy-coding-standard": "^9.4"
     },
     "suggest": {
-        "botman/driver-telegram": "^1.5",
-        "php-http/httplug-bundle": "^1.11"
+        "botman/driver-telegram": "^1.5"
     },
     "config": {
         "preferred-install": {
@@ -62,18 +50,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Sgomez\\Bundle\\BotmanBundle\\": "src/"
+            "Nek\\Bundle\\BotmanBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sgomez\\Bundle\\BotmanBundle\\Tests\\": "tests/",
+            "Nek\\Bundle\\BotmanBundle\\Tests\\": "tests/",
             "App\\": "tests/Fixtures/App"
         }
     },
     "scripts": {
         "check-cs": "vendor/bin/ecs check src tests",
         "fix-cs": "vendor/bin/ecs check --fix src tests",
-        "phpstan": "vendor/bin/phpstan analyse src tests --level max"
+        "phpstan": "vendor/bin/phpstan analyse src tests --level max",
+        "test": "vendor/bin/phpunit"
     }
 }

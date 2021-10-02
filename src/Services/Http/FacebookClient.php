@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Services\Http;
+namespace nek\Bundle\BotmanBundle\Services\Http;
 
 use Http\Client\Common\HttpMethodsClient;
-use Sgomez\Bundle\BotmanBundle\Exception\FacebookClientException;
+use nek\Bundle\BotmanBundle\Exception\FacebookClientException;
 use function GuzzleHttp\{json_decode, json_encode};
 
 final class FacebookClient

@@ -6,7 +6,7 @@
 
     <services>
         <service id="botman" class="BotMan\BotMan\BotMan">
-            <factory class="Sgomez\Bundle\BotmanBundle\DependencyInjection\BotmanFactory" method="create" />
+            <factory class="nek\Bundle\BotmanBundle\DependencyInjection\BotmanFactory" method="create" />
             <argument type="service" id="service_container" />
             <argument type="service" id="Symfony\Component\Cache\Adapter\AdapterInterface" />
             <argument type="service" id="request_stack" />
@@ -15,7 +15,7 @@
 
         <service id="BotMan\BotMan\BotMan" alias="botman" />
 
-        <service id="Sgomez\Bundle\BotmanBundle\Routing\WebhookControllerLoader">
+        <service id="nek\Bundle\BotmanBundle\Routing\WebhookControllerLoader">
             <argument type="service" id="parameter_bag" />
             <tag name="routing.loader" />
         </service>

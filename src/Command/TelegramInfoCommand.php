@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Command;
+namespace nek\Bundle\BotmanBundle\Command;
 
-use Sgomez\Bundle\BotmanBundle\Services\Http\TelegramClient;
+use nek\Bundle\BotmanBundle\Services\Http\TelegramClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

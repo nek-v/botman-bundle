@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Command;
+namespace nek\Bundle\BotmanBundle\Command;
 
-use Sgomez\Bundle\BotmanBundle\Exception\FacebookClientException;
-use Sgomez\Bundle\BotmanBundle\Services\Http\FacebookClient;
+use nek\Bundle\BotmanBundle\Exception\FacebookClientException;
+use nek\Bundle\BotmanBundle\Services\Http\FacebookClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -49,7 +49,7 @@ class FacebookStartButtonCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
 
@@ -60,13 +60,13 @@ class FacebookStartButtonCommand extends Command
 
                 $io->success('`Get started` button payload removed.');
 
-                return;
+                return Command::SUCCESS;
             }
 
             if (null === $this->payload) {
                 $io->error('Parameter `start_button_payload` must be configured in `botman.driver.facebook.start_button_payload` config path.');
 
-                return;
+                return Command::FAILURE;
             }
 
             $this->client->setGetStarted($this->payload);
@@ -75,5 +75,6 @@ class FacebookStartButtonCommand extends Command
         } catch (FacebookClientException $e) {
             $io->error($e->getMessage());
         }
+        return Command::SUCCESS;
     }
 }

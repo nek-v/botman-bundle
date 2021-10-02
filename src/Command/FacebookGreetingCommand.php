@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Command;
+namespace nek\Bundle\BotmanBundle\Command;
 
-use Sgomez\Bundle\BotmanBundle\Exception\FacebookClientException;
-use Sgomez\Bundle\BotmanBundle\Services\Http\FacebookClient;
+use nek\Bundle\BotmanBundle\Exception\FacebookClientException;
+use nek\Bundle\BotmanBundle\Services\Http\FacebookClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -27,6 +27,7 @@ class FacebookGreetingCommand extends Command
      * @var FacebookClient
      */
     private $client;
+
     /**
      * @var array
      */
@@ -49,7 +50,7 @@ class FacebookGreetingCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
 
@@ -60,13 +61,13 @@ class FacebookGreetingCommand extends Command
 
                 $io->success('`Greeting` message removed.');
 
-                return;
+                return Command::SUCCESS;
             }
 
             if (empty($this->greeting)) {
                 $io->error('Parameter `greeting` must be configured in `botman.drivers.facebook.parameters` config path.');
 
-                return;
+                return Command::FAILURE;
             }
 
             $this->client->setGreetingText($this->greeting);
@@ -75,5 +76,6 @@ class FacebookGreetingCommand extends Command
         } catch (FacebookClientException $e) {
             $io->error($e->getMessage());
         }
+        return Command::SUCCESS;
     }
 }

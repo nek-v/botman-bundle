@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sgomez\Bundle\BotmanBundle\Model\Telegram;
+namespace nek\Bundle\BotmanBundle\Model\Telegram;
 
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
 use Illuminate\Support\Collection;
