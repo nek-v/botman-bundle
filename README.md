@@ -48,7 +48,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Nek\Bundle\BotmanBundle\BotmanBundle(),
+        new nek\Bundle\BotmanBundle\BotmanBundle(),
         // ...
     );
 }
