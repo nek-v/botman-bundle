@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace nek\Bundle\BotmanBundle\Command;
+namespace Nek\Bundle\BotmanBundle\Command;
 
-use nek\Bundle\BotmanBundle\Exception\FacebookClientException;
-use nek\Bundle\BotmanBundle\Services\Http\FacebookClient;
+use Nek\Bundle\BotmanBundle\Exception\FacebookClientException;
+use Nek\Bundle\BotmanBundle\Services\Http\FacebookClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

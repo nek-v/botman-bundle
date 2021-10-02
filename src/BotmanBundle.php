@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace nek\Bundle\BotmanBundle;
+namespace Nek\Bundle\BotmanBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
