@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace nek\Bundle\BotmanBundle\Tests\DependencyInjection;
+namespace Nek\Bundle\BotmanBundle\Tests\DependencyInjection;
 
 use BotMan\BotMan\Drivers\NullDriver;
 use Matthias\SymfonyConfigTest\PhpUnit\ConfigurationTestCaseTrait;
-use nek\Bundle\BotmanBundle\DependencyInjection\Configuration;
+use Nek\Bundle\BotmanBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 
 class TelegramConfigurationTest extends TestCase

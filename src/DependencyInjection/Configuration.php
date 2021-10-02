@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace nek\Bundle\BotmanBundle\DependencyInjection;
+namespace Nek\Bundle\BotmanBundle\DependencyInjection;
 
 use BotMan\Drivers\Facebook\FacebookDriver;
 use BotMan\Drivers\Telegram\TelegramDriver;
