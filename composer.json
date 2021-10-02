@@ -18,7 +18,9 @@
         "ext-curl": "*",
         "ext-json": "*",
         "botman/botman": "^2.6",
-        "php-http/client-common": "^1.11",
+        "php-http/client-common": "^2.4",
+        "php-http/guzzle6-adapter": "^2.0",
+        "php-http/httplug-bundle": "^1.23",
         "symfony/cache": "^5.3",
         "symfony/config": "^5.3",
         "symfony/console": "5.3.*",
@@ -33,9 +35,9 @@
         "botman/driver-telegram": "^1.6",
         "matthiasnoback/symfony-config-test": "^4.3",
         "matthiasnoback/symfony-dependency-injection-test": "^4.3",
-        "phpstan/phpstan": "^0.12.99",
-        "phpstan/phpstan-phpunit": "^0.12.22",
-        "phpstan/phpstan-symfony": "^0.12.44",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpstan/phpstan-symfony": "^0.12",
         "phpunit/phpunit": "^9.5",
         "symplify/easy-coding-standard": "^9.4"
     },
@@ -63,6 +65,10 @@
         "check-cs": "vendor/bin/ecs check src tests",
         "fix-cs": "vendor/bin/ecs check --fix src tests",
         "phpstan": "vendor/bin/phpstan analyse src tests --level max",
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/phpunit",
+        "ci": [
+            "@phpstan",
+            "@tests"
+        ]
     }
 }
