@@ -50,12 +50,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Nek\\Bundle\\BotmanBundle\\": "src/"
+            "nek\\Bundle\\BotmanBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nek\\Bundle\\BotmanBundle\\Tests\\": "tests/",
+            "nek\\Bundle\\BotmanBundle\\Tests\\": "tests/",
             "App\\": "tests/Fixtures/App"
         }
     },

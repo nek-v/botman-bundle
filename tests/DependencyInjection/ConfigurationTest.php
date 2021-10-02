@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Nek\Bundle\BotmanBundle\Tests\DependencyInjection;
+namespace nek\Bundle\BotmanBundle\Tests\DependencyInjection;
 
 use Matthias\SymfonyConfigTest\PhpUnit\ConfigurationTestCaseTrait;
-use Nek\Bundle\BotmanBundle\DependencyInjection\Configuration;
+use nek\Bundle\BotmanBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 
 class ConfigurationTest extends TestCase
