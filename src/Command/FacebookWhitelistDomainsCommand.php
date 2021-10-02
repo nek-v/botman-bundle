@@ -27,11 +27,17 @@ class FacebookWhitelistDomainsCommand extends Command
      * @var FacebookClient
      */
     private $client;
+
     /**
-     * @var array
+     * @var array <string, FacebookClient>
      */
     private $whitelistedDomains;
 
+    /**
+     * FacebookWhitelistDomainsCommand constructor.
+     * @param FacebookClient $client
+     * @param array <string, FacebookClient> $whitelistedDomains
+     */
     public function __construct(FacebookClient $client, array $whitelistedDomains)
     {
         parent::__construct();
@@ -49,7 +55,7 @@ class FacebookWhitelistDomainsCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
 
@@ -60,13 +66,13 @@ class FacebookWhitelistDomainsCommand extends Command
 
                 $io->success('`Greeting` message removed.');
 
-                return;
+                return Command::SUCCESS;
             }
 
             if (empty($this->whitelistedDomains)) {
                 $io->error('Parameter `whitelisted_domains` must be configured in `botman.drivers.facebook.parameters` config path.');
 
-                return;
+                return Command::FAILURE;
             }
 
             $this->client->setWhitelistedDomains($this->whitelistedDomains);
@@ -75,5 +81,6 @@ class FacebookWhitelistDomainsCommand extends Command
         } catch (FacebookClientException $e) {
             $io->error($e->getMessage());
         }
+        return Command::SUCCESS;
     }
 }

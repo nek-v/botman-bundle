@@ -29,10 +29,15 @@ class FacebookGreetingCommand extends Command
     private $client;
 
     /**
-     * @var array
+     * @var array <string, FacebookClient>
      */
     private $greeting;
 
+    /**
+     * FacebookGreetingCommand constructor.
+     * @param FacebookClient $client
+     * @param array <string, FacebookClient> $greeting
+     */
     public function __construct(FacebookClient $client, array $greeting)
     {
         parent::__construct();
