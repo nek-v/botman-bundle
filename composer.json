@@ -18,6 +18,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "botman/botman": "^2.6",
+        "illuminate/support": "^8.63",
         "php-http/client-common": "^2.4",
         "php-http/guzzle6-adapter": "^2.0",
         "php-http/httplug-bundle": "^1.23",
@@ -64,7 +65,7 @@
     "scripts": {
         "check-cs": "vendor/bin/ecs check src tests",
         "fix-cs": "vendor/bin/ecs check --fix src tests",
-        "phpstan": "vendor/bin/phpstan analyse src tests --level max",
+        "phpstan": "vendor/bin/phpstan analyse src tests --level max --no-progress",
         "test": "vendor/bin/phpunit",
         "ci": [
             "@phpstan",

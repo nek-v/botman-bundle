@@ -47,7 +47,7 @@ class TelegramInfoCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
 
@@ -68,5 +68,6 @@ class TelegramInfoCommand extends Command
         foreach ($webhookInfo['result'] as $key => $value) {
             $io->writeln(sprintf('<info>%s</info>: %s', $key, $value));
         }
+        return Command::SUCCESS;
     }
 }

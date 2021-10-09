@@ -23,7 +23,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 final class BotmanExtension extends ConfigurableExtension
 {
     /**
-     * {@inheritdoc}
+     * @param array $mergedConfig
+     * @param ContainerBuilder $container
+     * @throws \Exception
      */
     protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void
     {
@@ -53,6 +55,10 @@ final class BotmanExtension extends ConfigurableExtension
         $container->setParameter('botman.drivers', $drivers);
     }
 
+    /**
+     * @param array $config
+     * @param ContainerBuilder $container
+     */
     private function createHttplugClient(array $config, ContainerBuilder $container): void
     {
         $httpClientId = $config['http']['client'];

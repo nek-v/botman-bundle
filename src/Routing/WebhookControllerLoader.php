@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Nek\Bundle\BotmanBundle\Routing;
 
+use RuntimeException;
 use Symfony\Component\Config\Loader\Loader;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Routing\Route;
@@ -27,20 +28,26 @@ final class WebhookControllerLoader extends Loader
     /**
      * @var ParameterBagInterface
      */
-    private $params;
+    private ParameterBagInterface $params;
 
+    /**
+     * WebhookControllerLoader constructor.
+     * @param ParameterBagInterface $params
+     */
     public function __construct(ParameterBagInterface $params)
     {
         $this->params = $params;
     }
 
     /**
-     * {@inheritdoc}
+     * @param mixed $resource
+     * @param string|null $type
+     * @return mixed|RouteCollection
      */
-    public function load($resource, $type = null)
+    public function load($resource, string $type = null)
     {
         if (true === $this->loaded) {
-            throw new \RuntimeException('Do not add the "extra" laoder twice');
+            throw new RuntimeException('Do not add the "extra" laoder twice');
         }
 
         $routes = new RouteCollection();
@@ -62,9 +69,11 @@ final class WebhookControllerLoader extends Loader
     }
 
     /**
-     * {@inheritdoc}
+     * @param mixed $resource
+     * @param string|null $type
+     * @return bool
      */
-    public function supports($resource, $type = null)
+    public function supports($resource, string $type = null)
     {
         return 'extra' === $type;
     }

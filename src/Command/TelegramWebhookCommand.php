@@ -60,7 +60,7 @@ class TelegramWebhookCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
         $unset = $input->getOption('unset');
@@ -70,7 +70,7 @@ class TelegramWebhookCommand extends Command
             $response = $this->telegramClient->removeWebhook();
             $this->printWebhookResponse($io, $response);
 
-            return;
+            return Command::SUCCESS;
         }
 
         if (null === $webhookRoute) {
@@ -79,5 +79,6 @@ class TelegramWebhookCommand extends Command
 
         $response = $this->telegramClient->setWebhook($webhookRoute);
         $this->printWebhookResponse($io, $response);
+        return Command::SUCCESS;
     }
 }

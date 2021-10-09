@@ -23,6 +23,13 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class BotmanFactory
 {
+    /**
+     * @param ContainerInterface $container
+     * @param AdapterInterface $filesystemAdapter
+     * @param RequestStack $requestStack
+     * @param array $drivers
+     * @return BotMan
+     */
     public static function create(ContainerInterface $container, AdapterInterface $filesystemAdapter, RequestStack $requestStack, array $drivers): BotMan
     {
         $config = [];
