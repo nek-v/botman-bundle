@@ -17,6 +17,10 @@ use Symfony\Component\Console\Style\OutputStyle;
 
 trait TelegramTrait
 {
+    /**
+     * @param OutputStyle $outputStyle
+     * @param array $response
+     */
     public function printWebhookResponse(OutputStyle $outputStyle, array $response): void
     {
         if (!array_key_exists('ok', $response)) {

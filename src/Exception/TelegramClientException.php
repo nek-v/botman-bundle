@@ -13,8 +13,15 @@ declare(strict_types=1);
 
 namespace Nek\Bundle\BotmanBundle\Exception;
 
-class TelegramClientException extends \RuntimeException
+use RuntimeException;
+
+class TelegramClientException extends RuntimeException
 {
+    /**
+     * @param string $method
+     * @param array $payload
+     * @return self
+     */
     public static function fromPayload(string $method, array $payload): self
     {
         return new self(sprintf('Error retrieving \'%s\' request: %s', $method, $payload['description']));

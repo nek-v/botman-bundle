@@ -44,6 +44,10 @@ class User
     {
     }
 
+    /**
+     * @param array $payload
+     * @return self
+     */
     public static function fromPayload(array $payload): self
     {
         $user = new self();

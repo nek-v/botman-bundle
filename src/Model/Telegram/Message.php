@@ -62,6 +62,10 @@ class Message
         return self::fromPayload($payload instanceof Collection ? $payload->toArray() : $payload);
     }
 
+    /**
+     * @param array $payload
+     * @return self
+     */
     public static function fromPayload(array $payload): self
     {
         $message = new self();

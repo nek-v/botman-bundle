@@ -14,63 +14,66 @@ declare(strict_types=1);
 namespace App\BotMan\Drivers\Generic;
 
 use BotMan\BotMan\Interfaces\DriverInterface;
+use BotMan\BotMan\Interfaces\UserInterface;
+use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
+use Symfony\Component\HttpFoundation\Response;
 
 class GenericDriver implements DriverInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function matchesRequest(): void
+    public function matchesRequest(): bool
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getMessages(): void
+    public function getMessages(): array
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isConfigured(): void
+    public function isConfigured(): bool
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getUser(IncomingMessage $matchingMessage): void
+    public function getUser(IncomingMessage $matchingMessage): UserInterface
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getConversationAnswer(IncomingMessage $message): void
+    public function getConversationAnswer(IncomingMessage $message): Answer
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function buildServicePayload($message, $matchingMessage, $additionalParameters = []): void
+    public function buildServicePayload($message, $matchingMessage, $additionalParameters = []): self
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function sendPayload($payload): void
+    public function sendPayload($payload): Response
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getName(): void
+    public function getName(): string
     {
     }
 
@@ -91,7 +94,7 @@ class GenericDriver implements DriverInterface
     /**
      * {@inheritdoc}
      */
-    public function serializesCallbacks(): void
+    public function serializesCallbacks(): bool
     {
     }
 }

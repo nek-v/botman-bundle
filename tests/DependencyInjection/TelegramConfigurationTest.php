@@ -75,7 +75,6 @@ class TelegramConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "parameters" at path "botman.drivers.telegram" must be configured.'
         );
     }
 
@@ -93,7 +92,6 @@ class TelegramConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "token" at path "botman.drivers.telegram.parameters" must be configured.'
         );
     }
 }

@@ -72,6 +72,10 @@ final class Chat
     {
     }
 
+    /**
+     * @param array $payload
+     * @return static
+     */
     public static function fromPayload(array $payload): self
     {
         $chat = new self();
