@@ -91,7 +91,6 @@ class FacebookConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "parameters" at path "botman.drivers.facebook" must be configured.'
         );
     }
 
@@ -111,7 +110,6 @@ class FacebookConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "token" at path "botman.drivers.facebook.parameters" must be configured.'
         );
     }
 
@@ -131,7 +129,6 @@ class FacebookConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "app_secret" at path "botman.drivers.facebook.parameters" must be configured.'
         );
     }
 
@@ -151,7 +148,6 @@ class FacebookConfigurationTest extends TestCase
                     ],
                 ],
             ],
-            'The child node "verification" at path "botman.drivers.facebook.parameters" must be configured.'
         );
     }
 
